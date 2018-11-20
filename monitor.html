@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>机位运行监控</title>
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="js/echarts.js"></script>
+</head>
+<body>
+  <div class="container monitor" id="monitor">
+    <div class="top">
+      <section class="section top-left">
+        <div class="wrapper">
+          <div class="items">
+            <i class="iconfont icon-plane-arrival"></i>
+            <div><h4>24</h4><p>总机位</p></div>
+          </div>
+          <div class="items">
+            <i class="iconfont icon-plane-arrival"></i>
+            <div><h4>18</h4><p>近机位</p></div>
+          </div>
+          <div class="items">
+            <i class="iconfont icon-plane-arrival"></i>
+            <div><h4>6</h4><p>远机位</p></div>
+          </div>
+        </div>
+      </section>
+      <section class="section top-right">
+        <div class="wrapper">
+          <div class="items">
+            <i class="iconfont icon-siglyphairplane a-w"></i>
+            <div><h4>17</h4><p>空机位</p></div>
+          </div>
+          <div class="items">
+            <i class="iconfont icon-siglyphairplane no-a-w"></i>
+            <div><h4>17</h4><p>不可用机位</p></div>
+          </div>
+          <div class="items">
+            <i class="iconfont icon-siglyphairplane a-ob"></i>
+            <div><h4>17</h4><p>即将降落</p></div>
+          </div>
+          <div class="items">
+            <i class="iconfont icon-siglyphairplane a-g"></i>
+            <div><h4>17</h4><p>正在保障</p></div>
+          </div>
+          <div class="items">
+            <i class="iconfont icon-siglyphairplane a-r"></i>
+            <div><h4>17</h4><p>保障超时</p></div>
+          </div>
+          <div class="items">
+            <i class="iconfont icon-siglyphairplane a-p"></i>
+            <div><h4>17</h4><p>保障完成</p></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="bottom">
+      <section class="section bottom-left" style="flex:1;margin-right: 15px;">
+        <div class="section-title text-c">
+          <h3>二号机坪</h3>
+        </div>
+        <div class="NO2-seat">
+          <div class="beyond">
+            <div class="b-left">
+              <div class="group">
+                <div class="seat-items column">
+                  <div class="seat-index">209R</div>
+                  <i class="iconfont icon-siglyphairplane a-w"></i>
+                  <span>ZH8306</span>
+                </div>
+                <div class="seat-items column">
+                  <div class="seat-index">209</div>
+                  <i class="iconfont icon-siglyphairplane a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+                <div class="seat-items column">
+                  <div class="seat-index">209L</div>
+                  <i class="iconfont icon-siglyphairplane a-r"></i>
+                  <span>ZH8306</span>
+                </div>
+              </div>
+            </div>
+            <div class="b-right">
+              <div class="group">
+                <div class="seat-items column">
+                  <div class="seat-index">210R</div>
+                </div>
+                <div class="seat-items column">
+                  <div class="seat-index">210</div>
+                  <i class="iconfont icon-siglyphairplane a-g icon-270deg"></i>
+                  <span>ZH8306</span>
+                </div>
+                <div class="seat-items column">
+                  <div class="seat-index">210L</div>
+             
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sideseat">
+            <div class="seat-items row-reverse" style="left: 8%;top: 0%">
+              <div class="seat-index">14</div>
+              <i class="iconfont icon-siglyphairplane icon-225deg a-g"></i>
+              <span>ZH8306</span>
+            </div>
+            <div class="seat-items row" style="right: 8%;top: 0%">
+              <div class="seat-index">14</div>
+              <i class="iconfont icon-siglyphairplane icon-45deg a-g"></i>
+              <span>ZH8306</span>
+            </div>
+            <div class="seat-items row-reverse" style="left: 8%;top: 20%">
+              <div class="seat-index">14</div>
+              <i class="iconfont icon-siglyphairplane icon-225deg a-g"></i>
+              <span>ZH8306</span>
+            </div>
+            <div class="seat-items row" style="right: 8%;top: 20%">
+              <div class="seat-index">14</div>
+              <i class="iconfont icon-siglyphairplane icon-45deg a-g"></i>
+              <span>ZH8306</span>
+            </div>
+            <div class="seat-items row-reverse" style="left: 8%;top: 40%">
+              <div class="seat-index">14</div>
+              <i class="iconfont icon-siglyphairplane icon-225deg a-g"></i>
+              <span>ZH8306</span>
+            </div>
+            <div class="seat-items row" style="right: 8%;top: 40%">
+              <div class="seat-index">14</div>
+              <i class="iconfont icon-siglyphairplane icon-45deg a-g"></i>
+              <span>ZH8306</span>
+            </div>
+            <div class="seat-items row-reverse" style="left: 8%;top: 60%">
+              <div class="seat-index">14</div>
+              <i class="iconfont icon-siglyphairplane icon-225deg a-g"></i>
+              <span>ZH8306</span>
+            </div>
+            <div class="seat-items row" style="right: 8%;top: 60%">
+              <div class="seat-index">14</div>
+              <i class="iconfont icon-siglyphairplane icon-45deg a-g"></i>
+              <span>ZH8306</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section bottom-left" style="flex:2">
+        <div class="section-title text-c">
+          <h3>一号机坪</h3>
+        </div>
+        <div class="NO1-seat">
+          <div class="beyond">
+            <div class="b-left">
+              <div class="group">
+                <div class="seat-items column">
+                  <div class="seat-index">23</div>
+                  <i class="iconfont icon-siglyphairplane a-w"></i>
+                  <span>ZH8306</span>
+                </div>
+                <div class="seat-items column">
+                  <div class="seat-index">22</div>
+                  <i class="iconfont icon-siglyphairplane a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+                <div class="seat-items column">
+                  <div class="seat-index">21</div>
+                  <i class="iconfont icon-siglyphairplane a-r"></i>
+                  <span>ZH8306</span>
+                </div>
+              </div>
+            </div>
+            <div class="b-right">
+              <div class="group">
+                <div class="seat-items column">
+                  <div class="seat-index">20</div>
+                  <i class="iconfont icon-siglyphairplane a-w icon-270deg"></i>
+                </div>
+                <div class="seat-items column">
+                  <div class="seat-index">19</div>
+                  <i class="iconfont icon-siglyphairplane a-ob icon-270deg"></i>
+                  <span>ZH8306</span>
+                </div>
+                <div class="seat-items column">
+                  <div class="seat-index">18</div>
+                  <i class="iconfont icon-siglyphairplane a-w icon-270deg"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="insd">
+            <div class="buliding">
+              <div class="bulid east">
+                <h5>东指廊</h5>
+        
+                <!-- 16 -->
+                <div class="seat-items row-reverse edge" style="right:89%;top:-15%; align-items: flex-end;">
+                  <div class="seat-index">14</div>
+                  <div style="margin-right: 5px;text-align: right;margin-bottom: 4px;">
+                    <i class="iconfont icon-siglyphairplane icon-90deg a-g" style="margin: 0px -5px 10px 0;"></i>
+                    <span>ZH8306</span>
+                  </div>
+                </div>
+
+                <!-- 17-->
+                <div class="seat-items row edge" style="left:72%;top:-20%; align-items: flex-end;">
+                  <div class="seat-index">17</div>
+                  <div style="margin-left: 5px;text-align: left;margin-bottom: 4px;">
+                    <i class="iconfont icon-siglyphairplane icon-180deg a-g" style="margin: 0px 0 10px -5px;"></i>
+                    <span>ZH8306</span>
+                  </div>
+                </div>
+
+                <!-- 14 -->
+                <div class="seat-items row-reverse" style="right:100%;top: 20%">
+                  <div class="seat-index">14</div>
+                  <i class="iconfont icon-siglyphairplane icon-45deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+
+                <!-- 12 -->
+                <div class="seat-items row-reverse" style="right:100%;top: 40%">
+                  <div class="seat-index">12</div>
+                  <i class="iconfont icon-siglyphairplane icon-45deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+
+                <!-- 10 -->
+                <div class="seat-items row-reverse" style="right:100%;top: 60%">
+                  <!-- <div><p class="gray">G1</p><div class="seat-index">10</div><p class="gray">G2</p></div>
+                  <div>
+                    <div style="display: flex;align-items: center;"><span>ZH8306</span>
+                    <i class="iconfont icon-siglyphairplane icon-45deg a-g"></i>
+                    </div>
+                    <div style="display: flex;align-items: center;"><span>ZH8306</span><i class="iconfont icon-siglyphairplane icon-45deg a-g"></i>
+                    </div>
+                  </div> -->
+                  <div class="seat-index">15</div>
+                  <i class="iconfont icon-siglyphairplane icon-225deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+
+                <!-- 15 -->
+                <div class="seat-items row" style="left:100%;top: 15%">
+                  <div class="seat-index">15</div>
+                  <i class="iconfont icon-siglyphairplane icon-225deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+
+                <!-- 13 -->
+                <div class="seat-items row" style="left:100%;top: 35%">
+                  <div class="seat-index">13</div>
+                  <i class="iconfont icon-siglyphairplane icon-225deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+
+                <!-- 11 -->
+                <div class="seat-items row" style="left:100%;top: 55%">
+                  <div class="seat-index">11</div>
+                  <i class="iconfont icon-siglyphairplane icon-225deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+
+               
+
+              </div>
+              <div class="bulid west">
+                <h5>西指廊</h5>
+                <!-- 8 -->
+                <div class="seat-items row-reverse edge" style="right:89%;top:-15%; align-items: flex-end;">
+                  <div class="seat-index">8</div>
+                  <div style="margin-right: 5px;text-align: right;margin-bottom: 4px;">
+                    <i class="iconfont icon-siglyphairplane icon-90deg a-g" style="margin: 0px -5px 10px 0;"></i>
+                    <span>ZH8306</span>
+                  </div>
+                </div>
+                
+                <!-- 9 -->
+                <div class="seat-items row edge" style="left:72%;top:-20%; align-items: flex-end;">
+                  <div class="seat-index">9</div>
+                  <div style="margin-left: 5px;text-align: left;margin-bottom: 4px;">
+                    <i class="iconfont icon-siglyphairplane icon-180deg a-g" style="margin: 0px 0 10px -5px;"></i>
+                    <span>ZH8306</span>
+                  </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="seat-items row-reverse" style="right:100%;top: 20%">
+                  <div class="seat-index">6</div>
+                  <i class="iconfont icon-siglyphairplane icon-45deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+                
+                <!-- 4 -->
+                <div class="seat-items row-reverse" style="right:100%;top: 40%">
+                  <div class="seat-index">4</div>
+                  <i class="iconfont icon-siglyphairplane icon-45deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+                
+                <!-- 2 -->
+                <div class="seat-items row-reverse" style="right:100%;top: 60%">
+                  <div class="seat-index">2</div>
+                  <i class="iconfont icon-siglyphairplane icon-45deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+               
+                
+                <!-- 7 -->
+                <div class="seat-items row" style="left:100%;top: 15%">
+                  <div class="seat-index">7</div>
+                  <i class="iconfont icon-siglyphairplane icon-225deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+                
+                <!-- 5 -->
+                <div class="seat-items row" style="left:100%;top: 35%">
+                  <div class="seat-index">5</div>
+                  <i class="iconfont icon-siglyphairplane icon-225deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+                
+                <!-- 3 -->
+                <div class="seat-items row" style="left:100%;top: 55%">
+                  <div class="seat-index">3</div>
+                  <i class="iconfont icon-siglyphairplane icon-225deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+
+                <!-- 1 -->
+                <div class="seat-items row" style="left:100%;top: 75%">
+                  <div class="seat-index">1</div>
+                  <i class="iconfont icon-siglyphairplane icon-225deg a-g"></i>
+                  <span>ZH8306</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="bottom-right">
+        <section class="section chart" style="margin-bottom:10px;">
+          <div class="section-title">
+            <h3>实时数据</h3>
+          </div>
+          <div class="content">
+            <div class="content-item">
+              <h4>廊桥机位</h4>
+              <strong>13</strong>
+            </div>
+            <div class="content-item">
+              <h4>一号机坪 远机位</h4>
+              <strong>5</strong>
+            </div>
+            <div class="content-item">
+              <h4>二号机坪 远机位</h4>
+              <strong>6</strong>
+            </div>
+          </div>
+          <div id="airportGrap" style="height: 300px"></div>
+        </section>
+        <section class="section chart">
+          <div class="section-title">
+            <h3>今日累计数据</h3>
+          </div>
+          <div class="content">
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+              </div>
+              <div class="sr-only">廊桥机位使用率</div>
+              <b class="p-text">70%</b>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+              </div>
+              <div class="sr-only">一号机坪 远机位使用率</div>
+              <b class="p-text">40%</b>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+ <script type="text/javascript">
+  //监控图表
+  var airportGrap = echarts.init(document.getElementById("airportGrap"));
+
+  var option = {
+    // title: {},
+    // tooltip: {},
+    animation: false,
+    legend: {
+      //orient: 'vertical',
+      left: 'center',
+      bottom: 10,
+      data: ['廊桥机位', "1号机坪远机位", '2号机坪远机位'],
+      icon: 'circle',
+      textStyle: {
+        color: 'white',
+        fontSize: 14,
+      }
+    },
+    tooltip: {
+      // trigger: 'item',
+      // formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    series: [
+      {
+        name: '实时数据',
+        type: 'pie',
+        radius: '55%',
+        center: ['50%', '45%'],
+        data: [
+          {
+            value: 13, name: '廊桥机位',
+            itemStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
+                offset: 0, color: 'rgba(54, 215, 232, 1)'
+              },
+              {
+                offset: 1, color: 'rgba(177, 148, 250, 1)'
+              }], false)
+
+            }
+          },
+          {
+            value: 5, name: '1号机坪远机位', itemStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                offset: 0, color: 'rgba(6, 185, 157, 1) '
+              },
+              {
+                offset: 1, color: 'rgba(132, 217, 210, 1)'
+              }], false)
+            }
+          },
+          {
+            value: 6, name: '2号机坪远机位', itemStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                offset: 0, color: 'rgb(254,158,97) '
+              },
+              {
+                offset: 1, color: 'rgb(255,196,136)'
+              }], false)
+            }
+          },
+        ],
+        label: {
+          // normal: {
+          //   show: true,
+          //    color: 'white',
+          // },
+          // emphasis: {
+          //   show: true
+          // }
+          normal: {
+              formatter: ' {b|{b}：}{c}\n {per|{d}%}  ',
+              color: 'white',
+              fontSize: 14,
+              rich: {
+                  b: {
+                      fontSize: 12,
+                      lineHeight: 30,
+                      color: '#eee',
+                  },
+                  per: {
+                      color: '#fff',
+                      fontSize: 14,
+                      backgroundColor: '#334455',
+                      padding: [4, 4],
+                      borderRadius: 4,
+                  }
+              }
+          }
+
+         
+        },
+        labelLine: {
+          normal: {
+            show: true
+          }
+        },
+        itemStyle: {
+          emphasis: {
+            shadowBlur: 20,
+            shadowOffsetX: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.2)'
+          }
+        },
+        symbol: 'circle',
+      }
+    ]
+  };
+
+  airportGrap.setOption(option);
+</script>
+
+</body>
+</html>
