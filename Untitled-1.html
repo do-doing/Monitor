@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>realInf</title>
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+  <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="js/highcharts-axis-arrow.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+</head>
+
+<body>
+  <div class="container realInf">
+    <div class="left">
+      <section class="section left-top">
+        <div class="wrapper">
+          <div class="items">
+            <i class="iconfont icon-shijian"></i>
+            <div>
+              <h4>2018-06-08</h4>
+              <p>AM 10:26</p>
+            </div>
+          </div>
+          <div class="items">
+            <i class="iconfont icon-tianqi-fengxiang"></i>
+            <div>
+              <h4>风向/风速</h4>
+              <p>风向/风速</p>
+            </div>
+          </div>
+          <div class="items">
+            <i class="iconfont icon-duowu-baitian"></i>
+            <div>
+              <h4>能见度</h4>
+              <p>600m/s</p>
+            </div>
+          </div>
+          <div class="items">
+            <i class="iconfont icon-baitian-duoyun"></i>
+            <div>
+              <h4>云量/云底高</h4>
+              <p>少云/1600m/s</p>
+            </div>
+          </div>
+          <div class="items">
+            <i class="iconfont icon-wendu"></i>
+            <div>
+              <h4>温度/露点</h4>
+              <p>30℃/27℃</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section left-main">
+        <div class="section-title">
+          <h3>登机口</h3><small>旅客分布</small>
+        </div>
+        <div class="wrapper">
+          <div class="examples">
+            <ul>
+              <li>X=当前人数/座位数*100%</li>
+              <li><div class="inf smooth"></div>X≤80%</li>
+              <li><div class="inf normal"></div>80%≤X≤100%</li>
+              <li><div class="inf warn"></div>100%≤X≤120%</li>
+              <li><div class="inf crowd"></div>X＞120%</li>
+            </ul>
+          </div>
+          <div class="L2">
+            <div class="east-board">
+              <p class="board-name">东指廊<span class="bage">L2</span></p>
+              <div class="w-row edge">
+                <div class="leftside inf normal">
+                  <div class="board-index">B16</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+                <div class="rightside inf smooth">
+                  <div class="board-index">B17</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+              </div>
+              <div class="w-row">
+                <div class="leftside inf crowd">
+                  <div class="board-index">B18</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+                <div class="rightside inf normal">
+                  <div class="board-index">B15</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+              </div>
+              <div class="w-row">
+                <div class="leftside inf warn">
+                  <div class="board-index">B14</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+                <div class="rightside inf smooth">
+                  <div class="board-index">B13</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+              </div>
+              <div class="w-row">
+                <div class="leftside inf warn">
+                  <div class="board-index">B12</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+                <div class="rightside inf normal">
+                  <div class="board-index">B11</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+              </div>
+              <div class="w-row">
+                <div class="leftside inf normal">
+                  <div class="board-index">B10</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+                <div class="rightside inf crowd">
+                  <div class="board-index">B09</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+              </div>
+            </div>
+            <div class="west-board">
+              <p class="board-name">西指廊<span class="bage">L2</span></p>
+              <div class="w-row edge">
+                <div class="leftside inf normal">
+                  <div class="board-index">B16</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+                <div class="rightside inf smooth">
+                  <div class="board-index">B17</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+              </div>
+              <div class="w-row">
+                <div class="leftside inf crowd">
+                  <div class="board-index">B18</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+                <div class="rightside inf normal">
+                  <div class="board-index">B15</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+              </div>
+              <div class="w-row">
+                <div class="leftside inf warn">
+                  <div class="board-index">B14</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+                <div class="rightside inf smooth">
+                  <div class="board-index">B13</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+              </div>
+              <div class="w-row">
+                <div class="leftside inf warn">
+                  <div class="board-index">B12</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+                <div class="rightside inf normal">
+                  <div class="board-index">B11</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+              </div>
+              <div class="w-row" style="justify-content: flex-end">
+                <div class="rightside inf crowd">
+                  <div class="board-index">B09</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="L1">
+            <div class="west-board">
+              <p class="board-name">西指廊<span class="bage">L1</span></p>
+              <div class="w-row edge">
+                <div class="leftside inf normal">
+                  <div class="board-index">B16</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+                <div class="rightside inf smooth">
+                  <div class="board-index">B17</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+              </div>
+              <div class="w-row">
+                <div class="leftside inf crowd">
+                  <div class="board-index">B18</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+                <div class="rightside inf normal">
+                  <div class="board-index">B15</div>
+                  <span class="b">114</span>
+                  <div class="line"></div>
+                  <span class="s">120</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section left-bottom">
+        <div id="airplan-chart" style="width: 100%; height: 300px"></div>
+      </section>
+    </div>
+    <div class="right">
+      <section class="section">
+        <div class="rigth-top">
+          <div class="right-t">
+            <div id="ring-discharged-daily" style="width: 120px; height: 120px;"></div>
+            <p>当日放行正常率</p>
+          </div>
+          <div class="right-t">
+            <div id="ring-discharged-monthly" style="width: 120px; height: 120px;"></div>
+            <p>当月放行正常率</p>
+          </div>
+        </div>
+        <div class="right-content">
+          <div class="content-item">
+            <div class="item-l">
+              <h4>累计保障航班</h4>
+              <strong>28953</strong>
+            </div>
+            <div class="item-r">
+              <p>进港<b>16037</b></p>
+              <p>出港<b>16037</b></p>
+            </div>
+          </div>
+          <div class="content-item">
+            <div class="item-l">
+              <h4>累计保障旅客</h4>
+              <strong>3249214</strong>
+            </div>
+            <div class="item-r">
+              <p>进港<b>16037</b></p>
+              <p>出港<b>16037</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="right-content">
+          <p class="content-title">执行情况</p>
+          <div class="content-item" style="display:block;">
+            <div class="list1">
+              <span>进港</span>
+              <div class="main">
+                <span>实际</span><b>25</b><i class="diag"></i>
+                <span>计划</span><b>25</b>
+              </div>
+              <span>22.12%</span>
+            </div>
+            <div class="list1">
+              <span>出港</span>
+              <div class="main">
+                <span>实际</span><b>25</b><i class="diag"></i>
+                <span>计划</span><b>25</b>
+              </div>
+              <span>28.12%</span>
+            </div>
+          </div>
+        </div>
+        <div class="right-content">
+          <p class="content-title">延误航班</p>
+          <div class="content-item" style="display:block;">
+            <div class="list1">
+              <span>进港</span>
+              <div class="main">
+                <span>实际</span><b>25</b><i class="diag"></i>
+                <span>计划</span><b>25</b>
+              </div>
+            </div>
+            <div class="list1">
+              <span>出港</span>
+              <div class="main">
+                <span>实际</span><b>25</b><i class="diag"></i>
+                <span>计划</span><b>25</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-content">
+          <p class="content-title">取消航班</p>
+          <div class="content-item" style="display:block;">
+            <div class="list1">
+              <span>进港</span>
+              <div class="main">
+                <span>实际</span><b>25</b><i class="diag"></i>
+                <span>计划</span><b>25</b>
+              </div>
+            </div>
+            <div class="list1">
+              <span>出港</span>
+              <div class="main">
+                <span>实际</span><b>25</b><i class="diag"></i>
+                <span>计划</span><b>25</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-content">
+          <p class="content-title">备降航班</p>
+          <div class="content-item" style="display:block;">
+            <div class="list1">
+              <span>进港</span>
+              <div class="main">
+                <span>实际</span><b>25</b><i class="diag"></i>
+                <span>计划</span><b>25</b>
+              </div>
+            </div>
+            <div class="list1">
+              <span>出港</span>
+              <div class="main">
+                <span>实际</span><b>25</b><i class="diag"></i>
+                <span>计划</span><b>25</b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(function () {
+      var data1, data2, data3;
+      drawChartForFlight(data1);
+      drawChartForDischargedDaily(data2);
+      drawChartForDischargedMonthly(data3);
+
+    });
+    function drawChartForFlight(data) {
+
+      var arriveFlightCount = [8, 14, 14, 6, 9, 14, 11, 10, 14, 9, 10, 14, 17, 11, 15, 6, 10, 6];
+      var departFlightCount = [-0, -7, -16, -10, -16, -7, -7, -14, -10, -10, -16, -14, -16, -16, -13, -15, -10, -6];
+      //获取
+      var nowDate = new Date();
+      var startDate = new Date(nowDate.getTime() - 17 * 60 * 60 * 1000);
+      var fullYear = startDate.getFullYear();
+      var month = startDate.getMonth();
+      var day = startDate.getDate();
+      var hours = startDate.getHours();
+
+
+      var options = {
+        chart: {
+          type: 'column',
+          align: 'center',
+          // style: {
+          //   fontSize: '16px',
+          //   color: '#ccc'
+          // },
+          backgroundColor: 'transparent'
+        },
+        legend: {
+          enabled: false
+        },
+        credits: {
+          enabled: false
+        },
+        title: {
+          text: '航班时段统计',
+          style: {
+            fontSize: '16px',
+            color: '#fff',
+            fontWeight: 'bold'
+          },
+        },
+        xAxis: {
+          // categories: ['6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'],  
+          offset: -103,
+          lineWidth: 1,
+          tickWidth: 0,
+          tickLength: 10,
+          plotLines: [{
+            color: '#000',
+            dashStyle: 'Shortdot',
+            width: 1,
+            value: 8.5,
+            id: 'plotline-1'
+          }],
+          labels: {
+            style: {
+              // color: 'green',
+              fontSize: 14,
+            }
+          },
+          type: 'datetime',
+          dateTimeLabelFormats: {
+            hour: '%H'
+          }
+          //tickWidth: 30
+        },
+        yAxis: {
+          title: {
+            text: null
+          },
+          gridLineDashStyle: 'LongDash',
+          gridLineWidth: 0.25,
+          tickInterval: 5,
+          labels: {
+            formatter: function () {
+              return Math.abs(this.value);
+            },
+            style: {
+              color: '#F4F4F5',
+              fontSize: 14,
+              fontWeight: 'normal'
+            }
+          }
+        },
+        plotOptions: {
+          column: {
+            dataLabels: {
+              enabled: true,
+              align: 'center',
+              inside: false,
+              y: 12,
+              borderWidth: 1,
+              padding: 0,
+              style: {
+                fontWeight: 'normal',
+                fontSize: 16
+              },
+              formatter: function () {
+                return Math.abs(this.y);
+              }
+            },
+            pointPadding: 0.14,
+            borderWidth: 0,
+          },
+          series: {
+            stacking: 'normal'
+          }
+        },
+        series: [
+          {
+            color: {
+              linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
+              stops: [
+                [0, '#90caf9'],
+                [1, '#047edf']
+              ]
+            },
+            name: '进港航班',
+            data: [8, 14, 14, 6, 9, 14, 11, 10, 14, 9, 10, 14, 17, 11, 15, 6, 10, 6],
+            data: arriveFlightCount,
+            pointStart: Date.UTC(fullYear, month, day, hours),
+            pointInterval: 60 * 60 * 1000 // one hour
+          },
+          {
+            color: {
+              linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
+              stops: [
+                [0, '#07cdae'],
+                [1, '#84d9d2']
+              ]
+            },
+            name: '出港航班',
+            data: [-0, -7, -16, -10, -16, -7, -7, -14, -10, -10, -16, -14, -16, -16, -13, -15, -10, -6],
+            data: departFlightCount,
+            pointStart: Date.UTC(fullYear, month, day, hours),
+            pointInterval: 60 * 60 * 1000 // one hour
+          }
+        ]
+      };
+
+      var chart = Highcharts.chart("airplan-chart", options);
+    }
+    function drawChartForDischargedDaily(data) {
+      var options = {
+        //
+        chart: {
+          type: 'pie',
+          animation: true,
+          spacing: [0, 0, 0, 0],
+          backgroundColor: {
+            // linearGradient: [0, 0, 0, 1],
+            stops: [
+              [0, '#370964'],
+              [1, '#2B1687']
+            ]
+          },
+          borderRadius: 100
+        },
+        credits: {
+          enabled: false
+        },
+        //标题
+        title: {
+          floating: true,
+          text: '80%',
+          style: {
+            fontSize: 16,
+            color: '#fff',
+            fontWeight: 'bold'
+          }
+        },
+        plotOptions: {
+          pie: {
+            dataLabels: {
+              enabled: false
+            }
+          }
+        },
+        series: [{
+          type: 'pie',
+          innerSize: '70%',
+          name: '放行率',
+          borderWidth: 0,
+          data: [
+            {
+              y: 90.0,
+              color: {
+                linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
+                stops: [
+                  [0, '#796FBE'],
+                  [1, '#20ABF6']
+                ]
+              }
+            },
+            {
+              y: 10.0,
+              color: '#D2D2D2'
+            }
+          ]
+        }]
+      };
+      var fun = function (c) { // 图表初始化完毕后的回调函数
+        // 环形图圆心
+        var centerY = c.series[0].center[1],
+          titleHeight = parseInt(c.title.styles.fontSize);
+        // 动态设置标题位置
+        c.setTitle({
+          y: centerY + titleHeight / 2
+        });
+      }
+
+      var mychart = Highcharts.chart('ring-discharged-daily', options, fun);
+    }
+
+    function drawChartForDischargedMonthly(data) {
+      var options = {
+        //
+        chart: {
+          type: 'pie',
+          animation: true,
+          spacing: [0, 0, 0, 0],
+          backgroundColor: {
+            // linearGradient: [0, 0, 0, 1],
+            stops: [
+              [0, '#370964'],
+              [1, '#2B1687']
+            ]
+          },
+          borderRadius: 100
+        },
+        credits: {
+          enabled: false
+        },
+        //标题
+        title: {
+          floating: true,
+          text: '80%',
+          style: {
+            fontSize: 16,
+            color: '#fff',
+            fontWeight: 'bold'
+          }
+        },
+        plotOptions: {
+          pie: {
+            dataLabels: {
+              enabled: false
+            }
+          }
+        },
+        series: [{
+          type: 'pie',
+          innerSize: '70%',
+          name: '放行率',
+          borderWidth: 0,
+          data: [
+            {
+              y: 90.0,
+              color: {
+                linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
+                stops: [
+                  [0, '#796FBE'],
+                  [1, '#20ABF6']
+                ]
+              }
+            },
+            {
+              y: 10.0,
+              color: '#D2D2D2'
+            }
+          ]
+        }]
+      };
+      var fun = function (c) { // 图表初始化完毕后的回调函数
+        // 环形图圆心
+        var centerY = c.series[0].center[1],
+          titleHeight = parseInt(c.title.styles.fontSize);
+        // 动态设置标题位置
+        c.setTitle({
+          y: centerY + titleHeight / 2
+        });
+      }
+
+      var mychart = Highcharts.chart('ring-discharged-monthly', options, fun);
+    }
+
+
+  </script>
+</body>
+
+</html>
